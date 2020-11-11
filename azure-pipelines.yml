@@ -22,15 +22,6 @@ steps:
     backendAzureRmStorageAccountName: 'vntechsolterraform'
     backendAzureRmContainerName: 'vntechsolterraformstate'
     backendAzureRmKey: 'azure/resource_group/dev/terraform.tfstate'
-
-- task: TerraformTaskV1@0
-  displayName: 'Terraform: plan'
-  inputs:
-    provider: 'azurerm'
-    command: 'Plan'
-    commandOptions: '-lock=true -refresh=true -var-file=vars.tfvars'
-    workingDirectory: '/'
-    environmentServiceNameAzureRM: 'azRMDevOpsCon'
     
 - task: TerraformTaskV1@0
   displayName: 'Terraform: apply'
