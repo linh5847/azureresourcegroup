@@ -27,7 +27,7 @@ steps:
   displayName: 'Terraform: plan'
   inputs:
     provider: 'azurerm'
-    command: 'plan'
+    command: 'Plan'
     commandOptions: '-lock=true -refresh=true -var-file=vars.tfvars'
     workingDirectory: '/'
     environmentServiceNameAzureRM: 'azRMDevOpsCon'
