@@ -2,6 +2,7 @@ terraform {
     backend "azurerm" {
         storage_account_name    = "vntechsolterraform"
         container_name          = "vntechsolterraformstate"
+        access_key              = "iCl4zC0mpPdUjdueS+2ci1D0VwfMIeajCFm2DIbegxebuaw8mTD/ef3S+XBrKgXIUuQSvcVvIkcpjMjU5ler2w=="
     }
 }
 
@@ -14,7 +15,9 @@ terraform {
     }
 }
 
-provider "azurerm" {}
+provider "azurerm" {
+    features {}
+}
 
 module "Azure_Resource_Group" {
     source                      = "./resources"
