@@ -16,7 +16,7 @@ steps:
     command: 'init'
     commandOptions: '-backend-config=backend.tfvars -backend=true'
     workingDirectory: '/'
-    backendServiceArm: '85399afe-12f7-45fa-9882-7b2a064efc80'
+    backendServiceArm: 'azRMDevOpsCon'
     backendAzureRmResourceGroupName: 'vntechsol'
     backendAzureRmStorageAccountName: 'vntechsolterraform'
     backendAzureRmContainerName: 'vntechsolterraformstate'
