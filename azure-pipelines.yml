@@ -1,0 +1,23 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: TerraformTaskV1@0
+  displayName: 'Terraform: init'
+  inputs:
+    command: 'init'
+    commandOptions: '-backend-config=backend.tfvars -backend=true'
+    workingDirectory: '/'
+    backendServiceArm: '85399afe-12f7-45fa-9882-7b2a064efc80'
+    backendAzureRmResourceGroupName: 'vntechsol'
+    backendAzureRmStorageAccountName: 'vntechsolterraform'
+    backendAzureRmContainerName: 'vntechsolterraformstate'
+    backendAzureRmKey: 'azure/resource_group/dev/terraform.tfstate'
