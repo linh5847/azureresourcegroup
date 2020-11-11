@@ -5,7 +5,7 @@ terraform {
         access_key              = "iCl4zC0mpPdUjdueS+2ci1D0VwfMIeajCFm2DIbegxebuaw8mTD/ef3S+XBrKgXIUuQSvcVvIkcpjMjU5ler2w=="
     }
 }
-
+/*
 terraform {
     required_providers {
         azurerm                 = {
@@ -14,8 +14,9 @@ terraform {
         }
     }
 }
-
+*/
 provider "azurerm" {
+    version = "=2.0"
     features {}
 }
 
